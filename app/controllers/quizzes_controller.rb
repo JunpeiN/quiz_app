@@ -10,9 +10,9 @@ class QuizzesController < ApplicationController
   end
 
   def create
-     @quiz = Quiz.create(quiz_params)
+    @quiz = Quiz.create(quiz_params)
     if @quiz.save
-      redirect_to new_quiz_path, notice: "追加しました"
+      redirect_to new_quiz_path, notice: '追加しました'
     else
       render :new
     end
@@ -23,26 +23,26 @@ class QuizzesController < ApplicationController
 
   def update
     if @quiz.update(quiz_params)
-      redirect_to quizzes_path, notice: "編集しました"
+      redirect_to quizzes_path, notice: '編集しました'
     else
       render :edit
     end
   end
 
-
   def destroy
-		if @quiz.destroy
-      redirect_to quizzes_path, notice: "削除しました"
+    if @quiz.destroy
+      redirect_to quizzes_path, notice: '削除しました'
     else
-      redirect_to quizzes_path, notice: "削除できませんでした"
+      redirect_to quizzes_path, notice: '削除できませんでした'
     end
   end
-  
+
   def responce
-    @quiz = Quiz.order("RAND()").limit(1)
+    @quiz = Quiz.order('RAND()').limit(1)
   end
 
   private
+
   def quiz_params
     params.require(:quiz).permit(:question, :answer, :remark)
   end
@@ -50,5 +50,4 @@ class QuizzesController < ApplicationController
   def set_quiz
     @quiz = Quiz.find(params[:id])
   end
-
 end
