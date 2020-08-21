@@ -1,0 +1,11 @@
+<div class="create-row">
+  <div class="quiz-create">
+    <h3>クイズ作成ページ</h3>
+    <%= form_with model: @quiz, local: true do |form| %>
+    <%= render 'layouts/error_messages', model: form.object %>
+    <%= render partial: "quiz", locals: { form: form } %>
+      <%= form.submit "追加" %>
+    <% end %>
+  </div>
+  <div><%= link_to "戻る", root_path %></div>
+</div>

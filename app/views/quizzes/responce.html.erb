@@ -1,0 +1,25 @@
+<div class="r-home">
+  <div class="r-title">次の問題に答えてください</div>
+
+  <div class=r-menu>
+    <%= link_to "終了", root_path ,:style=>"text-decoration: none;"%>
+    <div class=r-right>
+    <%= link_to "次へ", responce_quizzes_path,:style=>"text-decoration: none;" %>
+    </div>
+  </div>
+
+  <% @quiz.each do |quiz| %>
+    <div class="r-question">Q.<%=quiz.question %></div>
+    <%#入力蘭%>
+    <div class="answer-form"><textarea></textarea></div>
+    <%#隠しておいてボタンを押すと出てくる様にする%>
+    <div class = "correct hidden" id = correct-look>
+      <div class=correct-look>答え</div>
+      <%= quiz.answer %>
+      <div class=correct-look>備考</div>
+      <%= quiz.remark %>
+    </div>
+  <%end%>
+  <button class=look id="answer-look">答えを見る</button>
+  
+</div>

@@ -1,0 +1,6 @@
+ja:
+ activerecord:
+   attributes:
+     quiz:
+       question: 問題
+       answer: 答え

@@ -1,0 +1,22 @@
+.top{
+  font-size: 50px;
+  font-family: ヒラギノ丸ゴ ProN;
+  padding: 50px;
+  height: 100vh;
+  width: 100%;
+  text-align:center;
+  background-color: black;
+}
+
+.title{
+  color: white
+}
+
+.start{
+  font-size: 30px;
+  margin: 50px;
+  border: 10px groove grey ;
+  background-color:grey;
+  padding: 0;
+}
+

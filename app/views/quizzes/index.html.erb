@@ -1,0 +1,17 @@
+<h2>クイズ一覧</h2>
+<%= link_to "戻る",root_path %>
+<div class= quiz-list>
+
+  <% if @quizzes.present?%>
+
+    <% @quizzes.each do |quiz| %>
+      <div><%= quiz.question %></div>
+      <%= link_to "編集", edit_quiz_path(quiz.id) %>
+      <%= link_to "削除", quiz , method: :delete %>
+
+    <%end%>
+  <% else %>
+    <div>登録されているクイズはありません</div>
+  <% end %>
+
+</div>
