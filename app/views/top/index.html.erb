@@ -1,7 +1,11 @@
-<div>管理者専用</div>
+<% if user_signed_in? %>
 <%= link_to "クイズリスト", quizzes_path %>
 <%= link_to "クイズ追加", new_quiz_path %>
-
+<%= link_to "ログアウト",  destroy_user_session_path, method: :delete %>
+<%= link_to "管理情報編集",  edit_user_registration_path %>
+<% else %>
+<div><%= link_to "管理者ページ", new_user_session_path %></div>
+<% end %>
 
 <div class="top">
   <div class="title">プログラミング学習クイズ

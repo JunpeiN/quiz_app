@@ -1,4 +1,5 @@
 class QuizzesController < ApplicationController
+  before_action :authenticate_user!, except: [:responce]
   before_action :set_quiz, only: [:edit, :update, :destroy]
 
   def index
@@ -12,7 +13,7 @@ class QuizzesController < ApplicationController
   def create
     @quiz = Quiz.create(quiz_params)
     if @quiz.save
-      redirect_to new_quiz_path, notice: '追加しました'
+      redirect_to new_quiz_path
     else
       render :new
     end
@@ -23,7 +24,7 @@ class QuizzesController < ApplicationController
 
   def update
     if @quiz.update(quiz_params)
-      redirect_to quizzes_path, notice: '編集しました'
+      redirect_to quizzes_path
     else
       render :edit
     end
@@ -31,9 +32,9 @@ class QuizzesController < ApplicationController
 
   def destroy
     if @quiz.destroy
-      redirect_to quizzes_path, notice: '削除しました'
+      redirect_to quizzes_path
     else
-      redirect_to quizzes_path, notice: '削除できませんでした'
+      render :edit
     end
   end
 
