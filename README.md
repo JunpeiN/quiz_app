@@ -1,24 +1,58 @@
-# README
+# アプリ名
+プログラミング学習クイズアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+管理者が登録しているプログラミングに関するクイズがランダムで出題されるWEBアプリケーションです。
+その問題に解答しながらプログラミングを学習をすることができます。
 
-Things you may want to cover:
+## URL
+https://quiz-app-15467.herokuapp.com/
 
-* Ruby version
+## 管理者用アカウント
+Email：sample sample.com
+Password：a12345
 
-* System dependencies
+## 利用方法
+管理者側
+管理者はログインするとトップページにクイズを追加する項目と
+すでに追加しているクイズリストの項目があるので各ページにとび追加や編集をすることができます。
+利用者側
+クイズスタートボタンを押すとランダムにクイズが出題されますので、入力フォームに答えを入力後
+答えを見るボタンで答え合わせをすることができます。
 
-* Configuration
 
-* Database creation
+## 制作背景(意図)
+プログラミングの学習はとても覚えることが多く大変です。
+そこで楽しんで学習できるようにと作成しました。
 
-* Database initialization
+## DEMO(gifで動画や写真を貼って、ビューのイメージを掴んでもらいます)
+⇒特に、デプロイがまだできていない場合はDEMOをつけることで見た目を企業側に伝えることができます。
 
-* How to run the test suite
+## 工夫したポイント
+スムーズに問題を問けるように答えのページに遷移するのではなく非同期通信で表示するようにしました。
 
-* Services (job queues, cache servers, search engines, etc.)
+## 使用技術(開発環境)
+HTML / CSS / JavaScript / Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code
 
-* Deployment instructions
+## 追加予定機能
+問題数が増えてくることを想定して問題をジャンルを分けて登録できるようにし、
+ジャンルを選択して学習できるようにしていこうと考えております。
 
-* ...
+## DB設計
+
+### quizzes テーブル
+
+| Column     | Type | Options     |
+| ---------- | ---- | ----------- |
+| question   | text | null: false |
+| answer     | text | null: false |
+| remark     | text | null: false |
+
+
+### users テーブル
+
+| Column         | Type    | Options     |
+| -------------- | ------- | ----------- |
+| email          | string  | null: false |
+| password       | string  | null: false |
+
