@@ -1,5 +1,5 @@
 # アプリ名
-プログラミング学習クイズアプリ
+**プログラミング学習クイズアプリ**
 
 ## 概要
 管理者が登録しているプログラミングに関するクイズがランダムで出題されるWEBアプリケーションです。  
@@ -26,15 +26,20 @@ Password：a12345
 そこで楽しんで学習できるようにと作成しました。
 
 ## イメージ
-管理者以外は上部のメニューが見えていません。  
+管理者以外は上部のメニュー(クイズリスト等)が見えていません。 
+  
 ![1](https://github.com/JunpeiN/quiz_app/blob/master/app/assets/images/%E3%82%B9%E3%82%AF%E3%82%B7%E3%83%A71.png)
-クイズスタートボタンを押すと始まります。  
+  
+クイズスタートボタンを押すと始まります。 
+  
 ![2](https://github.com/JunpeiN/quiz_app/blob/master/app/assets/images/%E3%82%B9%E3%82%AF%E3%82%B7%E3%83%A72.png)
-答えを見るボタンで解答表示し次へボタンで次の問題へ  
+  
+答えを見るボタンを押すと解答が表示され、次へボタンで次の問題へ進みます。  
+  
 ![3](https://github.com/JunpeiN/quiz_app/blob/master/app/assets/images/%E3%82%B9%E3%82%AF%E3%82%B7%E3%83%A73.png)
 
 ## 工夫したポイント
-スムーズに問題を問けるように答えのページに遷移するのではなく非同期通信で表示するようにしました。
+スムーズに問題を問けるように、答えのページに遷移するのではなく非同期通信で表示するようにしました。
 
 ## 使用技術(開発環境)
 HTML / CSS / JavaScript / Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code
