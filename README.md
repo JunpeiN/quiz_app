@@ -27,11 +27,11 @@ Password：a12345
 
 ## イメージ
 管理者以外は上部のメニューが見えていません。  
-![1]()
+![1](https://github.com/JunpeiN/quiz_app/blob/master/app/assets/images/%E3%82%B9%E3%82%AF%E3%82%B7%E3%83%A71.png)
 クイズスタートボタンを押すと始まります。  
-![2]()
+![2](https://github.com/JunpeiN/quiz_app/blob/master/app/assets/images/%E3%82%B9%E3%82%AF%E3%82%B7%E3%83%A72.png)
 答えを見るボタンで解答表示し次へボタンで次の問題へ  
-![3]()
+![3](https://github.com/JunpeiN/quiz_app/blob/master/app/assets/images/%E3%82%B9%E3%82%AF%E3%82%B7%E3%83%A73.png)
 
 ## 工夫したポイント
 スムーズに問題を問けるように答えのページに遷移するのではなく非同期通信で表示するようにしました。
